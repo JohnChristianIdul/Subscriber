@@ -17,11 +17,11 @@ public class SpotifyPage {
         int checkId = s.id;
         if(numOfSubscriber != 0){
             for(int i = 0; i < subscribe.length; i++){
-                int id = subscribe[i].id;
-                System.out.println(id);
-                if(checkId == id){
-                    System.out.println("ID must be unique.");
-                    return false;
+                if(subscribe[i] != null){
+                    if(subscribe[i].id == checkId) {
+                        System.out.println("ID must be unique.");
+                        return false;
+                    }
                 }
             }
         }
@@ -41,13 +41,13 @@ public class SpotifyPage {
                 return true;
             }
         }
-        System.out.println("Subscriber does not exist");
+        System.out.println("Subscriber with id " + id + " does not exist");
         return false;
     }
 
     public void display(){
         for(int i = 0; i < subscribe.length; i++){
-            System.out.println("Name: " + subscribe[i].name + "\nType of subscription: " + subscribe[i].getClass());
+            System.out.println("Name: " + subscribe[i].name + "\nType of subscription: " + subscribe[i].getClass().getSimpleName());
         }
     }
 

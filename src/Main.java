@@ -34,7 +34,10 @@ public class Main {
                     scanner.nextLine();
                     System.out.println("Date joined(e.g Jan152019): ");
                     String date = scanner.nextLine();
-                    spotify.addSubscriber(new BasicSubscriber(id, name, fee, date));
+                    BasicSubscriber b = new BasicSubscriber(id, name, fee, date);
+                    if(spotify.addSubscriber(b)){
+                        System.out.println("Subscriber added successfully");
+                    }
                     break;
                 case 2:
                     scanner.nextLine();
@@ -48,7 +51,10 @@ public class Main {
                     scanner.nextLine();
                     System.out.println("Premium Year: ");
                     int year = scanner.nextInt();
-                    spotify.addSubscriber(new PremiumSubscriber(pid, pname, pfee, year));
+                    PremiumSubscriber premium = new PremiumSubscriber(pid, pname, pfee, year);
+                    if(spotify.addSubscriber(premium)){
+                        System.out.println("Subscriber added successfully");
+                    }
                     break;
                 default:
                     break;
@@ -70,6 +76,7 @@ public class Main {
         else{
             System.out.println("Completed!");
         }
+        System.out.println("\nList of Subscribers:");
         spotify.display();
 
     }
