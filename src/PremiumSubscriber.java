@@ -1,5 +1,5 @@
 public class PremiumSubscriber extends Subscriber implements Discountable{
-    protected int premiumYears;
+    private int premiumYears;
 
     public PremiumSubscriber(int id, String name, double monthlyFees, int premiumYears){
         super(id, name, monthlyFees);
@@ -8,7 +8,11 @@ public class PremiumSubscriber extends Subscriber implements Discountable{
 
     @Override
     public double feeAfterDiscount() {
-        return 0;
+        if(premiumYears < 4){
+            return monthlyFees -= monthlyFees*0.20;
+        } else {
+            return monthlyFees -= monthlyFees*0.40;
+        }
     }
 
     @Override

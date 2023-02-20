@@ -29,7 +29,7 @@ public class SpotifyPage {
         numOfSubscriber++;
         return true;
         } catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Subcriber number is at limit");
+            System.out.println("Subscriber number is at limit cannot add anymore.");
             return false;
         }
     }
@@ -37,7 +37,7 @@ public class SpotifyPage {
     public boolean searchByID(int id){
         for(int i=0; i<subscribe.length; i++){
             if(id == subscribe[i].id){
-                System.out.println("Subscriber " + subscribe[i].name + " is a " + subscribe[i].getClass().getName());
+                System.out.println("Subscriber " + subscribe[i].name + " and is a " + subscribe[i].getClass().getName());
                 return true;
             }
         }
@@ -56,14 +56,7 @@ public class SpotifyPage {
         for(Subscriber s : subscribe){
             if(s instanceof PremiumSubscriber){
                 PremiumSubscriber p = (PremiumSubscriber) s;
-                if(p.premiumYears < 4){
-                    double minus20Fee = p.monthlyFees - (p.monthlyFees*0.2);
-                    total += minus20Fee;
-                }
-                if(p.premiumYears > 3){
-                    double minus40fee = p.monthlyFees - (p.monthlyFees*0.4);
-                    total += minus40fee;
-                }
+                    total += p.feeAfterDiscount();
             }
             if(s instanceof BasicSubscriber){
                 BasicSubscriber b = (BasicSubscriber) s;

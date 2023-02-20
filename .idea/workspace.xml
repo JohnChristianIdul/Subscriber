@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56fd3f24-aa94-4a83-995a-c1dca514b504" name="Changes" comment="Initial Commit">
+    <list default="true" id="56fd3f24-aa94-4a83-995a-c1dca514b504" name="Changes" comment="Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PremiumSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SpotifyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpotifyPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,9 @@
       <option name="presentableId" value="Default" />
       <updated>1676736602261</updated>
       <workItem from="1676736604456" duration="4964000" />
-      <workItem from="1676772703365" duration="1194000" />
+      <workItem from="1676772703365" duration="1461000" />
+      <workItem from="1676877009294" duration="1337000" />
+      <workItem from="1676892138534" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1676741614378</created>
@@ -72,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676741614378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Complete">
+      <created>1676773929528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676773929528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete" />
   </component>
 </project>
